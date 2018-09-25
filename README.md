@@ -1,7 +1,5 @@
 # Docker Cheat Sheet
 
-**Want to improve this cheat sheet?  See the [Contributing](#contributing) section!**
-
 ## Table of Contents
 
 * [Why Docker](#why-docker)
@@ -27,19 +25,6 @@
 
 Developers can get going quickly by starting with one of the 13,000+ apps available on Docker Hub. Docker manages and tracks changes and dependencies, making it easier for sysadmins to understand how the apps that developers build work. And with Docker Hub, developers can automate their build pipeline and share artifacts with collaborators through public or private repositories.
 
-Docker helps developers build and ship higher-quality applications, faster." -- [What is Docker](https://www.docker.com/what-docker#copy1)
-
-## Prerequisites
-
-I use [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) with the [Docker plugin](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#docker) for autocompletion of docker commands. YMMV.
-
-### Linux
-
-The 3.10.x kernel is [the minimum requirement](https://docs.docker.com/engine/installation/binaries/#check-kernel-dependencies) for Docker.
-
-### MacOS
-
- 10.8 “Mountain Lion” or newer is required.
 
 ## Installation
 
@@ -57,8 +42,6 @@ If you are a complete Docker newbie, you should follow the [series of tutorials]
 
 ### macOS
 Download and install [Docker Community Edition](https://www.docker.com/community-edition). if you have Homebrew-Cask, just type `brew cask install docker`. Or Download and install [Docker Toolbox](https://docs.docker.com/toolbox/overview/).  [Docker For Mac](https://docs.docker.com/docker-for-mac/) is nice, but it's not quite as finished as the VirtualBox install.  [See the comparison](https://docs.docker.com/docker-for-mac/docker-toolbox/).
-
-> **NOTE** Docker Toolbox is legacy. you should to use Docker Community Edition, See (Docker Toolbox)[https://docs.docker.com/toolbox/overview/]
 
 Once you've installed Docker Community Edition, click the docker icon in Launchpad. Then start up a container:
 
@@ -793,23 +776,3 @@ vim httpd.conf
 # start container with modified configuration
 docker run --rm -ti -v "$PWD/httpd.conf:/usr/local/apache2/conf/httpd.conf:ro" -p "80:80" httpd
 ```
-
-## Contributing
-
-Here's how to contribute to this cheat sheet.
-
-### Open README.md
-
-Click [README.md](https://github.com/wsargent/docker-cheat-sheet/blob/master/README.md) <-- this link
-
-![Click This](images/click.png)
-
-### Edit Page
-
-![Edit This](images/edit.png)
-
-### Make Changes and Commit
-
-![Change This](images/change.png)
-
-![Commit](images/commit.png)
