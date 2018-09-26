@@ -1,4 +1,6 @@
-# Docker Cheat Sheet
+# Docker guide
+
+Based on https://github.com/wsargent/docker-cheat-sheet, added additional information.
 
 ## Table of Contents
 
@@ -54,8 +56,17 @@ That's it, you have a running Docker container.
 If you are a complete Docker newbie, you should probably follow the [series of tutorials](https://docs.docker.com/engine/getstarted/) now.
 
 ## Containers
+Containers, or otherwise known as operating-system-level virtualization, are a lightweight approach to virtualization that only provides the bare minimum that an application requires to run and function as intended. In a way, they can be considered as super minimalist virtual machines that are not running on a hypervisor, though technically they are processes. Items usually bundled into a container include:
 
-[Your basic isolated Docker process](http://etherealmind.com/basics-docker-containers-hypervisors-coreos/). Containers are to Virtual Machines as threads are to processes. Or you can think of them as chroots on steroids.
+* Application
+* Dependencies
+* Libraries
+* Binaries
+* Configuration files
+Containerizing an application enables it to run reliably in different environments by abstracting away the operating system and the physical infrastructure. Containerized applications are sharing the kernel of the host operating system with other containers and the shared part of the OS is read only. Inside a container, there is often a single executable service or microservice.
+
+The size of the containers is usually measured in tens of megabytes and it only takes 1–2 seconds to provision one. When the load is increasing new containers can be created and when the load drops containers can be destroyed. When containers need to be updated you only need to modify the configuration file and then create new containers and destroy the old ones.
+
 
 ### Lifecycle
 
