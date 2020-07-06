@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "title": "AQ",
+    "owner": "AW",
+    "description": "SA"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "At",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
+    "reviewer": "AS"
+  }
+}
